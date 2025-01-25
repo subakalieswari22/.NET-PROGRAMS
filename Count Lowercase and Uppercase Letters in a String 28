@@ -1,0 +1,20 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a string: ");
+        string str = Console.ReadLine();
+        int upperCount = 0, lowerCount = 0;
+
+        foreach (char c in str)
+        {
+            if (char.IsUpper(c))
+                upperCount++;
+            else if (char.IsLower(c))
+                lowerCount++;
+        }
+
+        Console.WriteLine($"Uppercase letters: {upperCount}, Lowercase letters: {lowerCount}");
+    }
+}
