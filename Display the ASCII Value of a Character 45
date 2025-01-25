@@ -1,0 +1,12 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter a character:");
+        char ch = char.Parse(Console.ReadLine());
+        int asciiValue = (int)ch;
+        Console.WriteLine($"ASCII value of {ch}: {asciiValue}");
+    }
+}
