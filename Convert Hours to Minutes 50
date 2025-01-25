@@ -1,0 +1,13 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter hours:");
+        int hours = int.Parse(Console.ReadLine());
+
+        int minutes = hours * 60;
+        Console.WriteLine($"{hours} hours is equal to {minutes} minutes.");
+    }
+}
