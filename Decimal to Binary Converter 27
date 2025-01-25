@@ -1,0 +1,11 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a decimal number: ");
+        int decimalValue = int.Parse(Console.ReadLine());
+        string binary = Convert.ToString(decimalValue, 2);
+        Console.WriteLine($"Binary value: {binary}");
+    }
+}
