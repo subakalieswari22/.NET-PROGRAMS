@@ -1,0 +1,10 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        DateTime currentDateTime = DateTime.Now;
+        Console.WriteLine($"Current Date and Time: {currentDateTime:yyyy-MM-dd HH:mm:ss}");
+    }
+}
