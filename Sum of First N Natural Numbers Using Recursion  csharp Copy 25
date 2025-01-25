@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static int SumOfNaturalNumbers(int n)
+    {
+        if (n == 1)
+            return 1;
+        return n + SumOfNaturalNumbers(n - 1);
+    }
+
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int n = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Sum of first {n} natural numbers: {SumOfNaturalNumbers(n)}");
+    }
+}
