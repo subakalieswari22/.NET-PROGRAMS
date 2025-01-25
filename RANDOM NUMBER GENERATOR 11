@@ -1,0 +1,10 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Random rand = new Random();
+        int randomNum = rand.Next(1, 101); // Random number between 1 and 100
+        Console.WriteLine($"Random number: {randomNum}");
+    }
+}
