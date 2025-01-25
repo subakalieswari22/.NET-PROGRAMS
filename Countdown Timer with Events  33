@@ -1,0 +1,37 @@
+using System;
+using System.Windows.Forms;
+
+public partial class TimerForm : Form
+{
+    private Timer timer;
+    private int timeLeft;
+
+    public TimerForm()
+    {
+        InitializeComponent();
+        timeLeft = 10; // 10 seconds countdown
+
+        timer = new Timer();
+        timer.Interval = 1000; // 1 second interval
+        timer.Tick += Timer_Tick;
+    }
+
+    private void Timer_Tick(object sender, EventArgs e)
+    {
+        if (timeLeft > 0)
+        {
+            timeLeft--;
+            lblTime.Text = timeLeft.ToString();
+        }
+        else
+        {
+            timer.Stop();
+            MessageBox.Show("Time's up!");
+        }
+    }
+
+    private void btnStart_Click(object sender, EventArgs e)
+    {
+        timer.Start();
+    }
+}
