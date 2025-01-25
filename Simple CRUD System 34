@@ -1,0 +1,31 @@
+using System;
+using System.Windows.Forms;
+using System.Collections.Generic;
+
+public partial class CrudForm : Form
+{
+    private List<string> items;
+
+    public CrudForm()
+    {
+        InitializeComponent();
+        items = new List<string>();
+    }
+
+    private void btnAdd_Click(object sender, EventArgs e)
+    {
+        string item = txtItem.Text;
+        items.Add(item);
+        lstItems.Items.Add(item);
+        txtItem.Clear();
+    }
+
+    private void btnDelete_Click(object sender, EventArgs e)
+    {
+        if (lstItems.SelectedIndex != -1)
+        {
+            items.RemoveAt(lstItems.SelectedIndex);
+            lstItems.Items.RemoveAt(lstItems.SelectedIndex);
+        }
+    }
+}
