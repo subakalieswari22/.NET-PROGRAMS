@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] votes = new int[3]; // 0 - Candidate 1, 1 - Candidate 2, 2 - Candidate 3
+
+        Console.WriteLine("Vote for a candidate (1, 2, or 3):");
+
+        for (int i = 0; i < 5; i++) // 5 voters
+        {
+            Console.Write($"Voter {i + 1}: ");
+            int vote = int.Parse(Console.ReadLine());
+            if (vote >= 1 && vote <= 3)
+                votes[vote - 1]++;
+            else
+                Console.WriteLine("Invalid vote.");
+        }
+
+        Console.WriteLine("Voting Results:");
+        Console.WriteLine($"Candidate 1: {votes[0]} votes");
+        Console.WriteLine($"Candidate 2: {votes[1]} votes");
+        Console.WriteLine($"Candidate 3: {votes[2]} votes");
+    }
+}
